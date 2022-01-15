@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	windowSurface = SDL_GetWindowSurface(window);
 
-	if (NULL == window)
+	if (window == NULL)
 	{
 		std::cout << "Window not created... " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	imageSurface = SDL_LoadBMP(argv[1]);
 
-	if (NULL == imageSurface)
+	if (imageSurface == NULL)
 	{
 		std::cout << "SDL Couldn't Init image... " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
